@@ -1,0 +1,42 @@
+<form [formGroup]="form" (ngSubmit)="updateClase($event)">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Clase</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="row" >
+          <div class="col-xs">
+            <mat-form-field>
+              <input id="inputEditarIdUsuarioClase" placeholder="idUsuario" formControlName="idUsuario" matInput type="number">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs">
+            <mat-form-field>
+              <input id="inputEditarIdCursoClase" placeholder="idCurso" formControlName="idCurso" matInput type="number">
+            </mat-form-field>
+           </div>
+        </div>
+        <div class="row">
+          <div class="col-xs">
+            <mat-form-field>
+              <input  id="inputEditarFechaInicioClase" placeholder="Fecha Inicio" formControlName="fechaInicio" matInput type="datetime">
+            </mat-form-field>
+           </div>
+        </div>
+        <div class="row">
+            <div class="col-xs">
+              <mat-form-field>
+                <input id="inputEditarFechaFinClase" placeholder="Fecha Fin" formControlName="fechaFin" matInput type="datetime">
+              </mat-form-field>
+             </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button id="linkEditarGuardarCLase" [disabled]="form.invalid" mat-raised-button type="submit">Guardar</button>
+        <button id="linkEditarCancelarGuardarClase" mat-raised-button color="warn" routerLink="/clase">cancelar</button>
+      </mat-card-actions>
+    </mat-card>
+    
+  </form>

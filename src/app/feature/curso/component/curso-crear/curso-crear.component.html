@@ -1,0 +1,41 @@
+<form [formGroup]="form" (ngSubmit)="saveCurso($event)">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Curso</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="row" >
+          <div class="col-xs">
+            <mat-form-field>
+              <input id="inputCrearNombreCurso" placeholder="Nombre" formControlName="nombre" matInput type="text">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs">
+            <mat-form-field>
+              <mat-label>Tipo</mat-label>
+                <mat-select id="inputCrearTipoCurso" placeholder="Tipo" formControlName="tipo"  >
+                  <mat-option value="primaria">PRIMARIA</mat-option>
+                  <mat-option value="secundaria">SECUNDARIA</mat-option>
+                  <mat-option value="universidad">UNIVERSIDAD</mat-option>
+                  <mat-option value="otro">OTRO</mat-option>
+                </mat-select>
+            </mat-form-field>
+            </div>
+        </div>
+            <div class="row" >
+                <div class="col-xs">
+                  <mat-form-field>
+                    <input id="inputCrearDescripcionCurso" placeholder="Descripcion" formControlName="descripcion" matInput type="text">
+                  </mat-form-field>
+                </div>
+              </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button id="linkCrearGuardarCurso" [disabled]="form.invalid" mat-raised-button type="submit">Guardar</button>
+        <button id="linkCancelarCrearGuardarCurso" mat-raised-button color="warn" routerLink="/curso">cancelar</button>
+      </mat-card-actions>
+    </mat-card>
+    
+  </form>

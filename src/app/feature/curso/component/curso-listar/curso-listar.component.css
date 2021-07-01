@@ -1,0 +1,11 @@
+table {
+    width: 100%;
+}
+.btnRegistrar{
+    float: right;
+    margin: 15px 30px 15px;
+    width: 150px;
+    height: 50px;
+    background-color:lightskyblue;
+
+}

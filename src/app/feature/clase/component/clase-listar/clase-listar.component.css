@@ -1,0 +1,19 @@
+table {
+    width: 100%;
+    margin: auto;
+    table-layout: fixed;
+}
+
+.btnRegistrar{
+    float: right;
+    margin: 15px 30px 15px;
+    width: 150px;
+    height: 50px;
+    background-color:lightskyblue;
+
+}
+
+.inputBuscar{
+    margin: 15px 30px 15px;
+    float: left;
+}

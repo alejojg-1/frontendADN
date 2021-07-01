@@ -1,0 +1,29 @@
+<form [formGroup]="form" (ngSubmit)="saveUsuario($event)">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Usuario</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="row" >
+          <div class="col-xs">
+            <mat-form-field>
+              <input id="inputCrearNombreUsuario"placeholder="Nombre" formControlName="nombre" matInput type="text">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs">
+            <mat-form-field>
+              <input id="inputCrearIdentiUsuario" placeholder="Identificación" formControlName="identificacion" matInput type="number">
+            </mat-form-field>
+           </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button id="linkGuardarUsuario" [disabled]="form.invalid" mat-raised-button type="submit">Guardar</button>
+        <button id="linkCancelarCrearUsuario" mat-raised-button color="warn" routerLink="/usuario">cancelar</button>
+
+      </mat-card-actions>
+    </mat-card>
+    
+  </form>
